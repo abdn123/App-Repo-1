@@ -20,11 +20,3 @@ steps:
     pip install -r requirements.txt
     pytest
   displayName: 'Run Unit Tests'
-
-- task: Docker@2
-  inputs:
-    command: 'buildAndPush'
-    repository: 'abdn1/app1'
-    dockerfile: '**/Dockerfile'
-    tags: '$(Build.BuildId)'
-    containerRegistry: 'devopsprojk200496.azurecr.io'
